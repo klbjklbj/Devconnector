@@ -5,13 +5,18 @@ const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 const bodyParser = require("body-parser");
+const passport = require("passport");
 
 //create instance of express
 const app = express();
 
 //Body parser middleware
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+//Passport configuration
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 //Db config
 //connection string in keys file
