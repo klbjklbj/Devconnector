@@ -1,6 +1,7 @@
 const Validator = require('validator');
 const isEmpty = require('./is-empty');
 
+// should this be validateEducationInput?
 module.exports = function validateExperienceInput(data) {
   let errors = {};
 
