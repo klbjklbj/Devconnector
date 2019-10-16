@@ -14,4 +14,4 @@ const isEmpty = value =>
 //   );
 // }
 
-export default isEmpty;
+export default isEmpty; //same as module.exports= for react
